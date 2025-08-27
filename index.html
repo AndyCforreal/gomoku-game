@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋對戰 - 完整版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">五子棋對戰 - 完整版</h1>
+            
+            <div class="mode-selection">
+                <button class="mode-btn active" id="normalModeBtn">一般對戰</button>
+                <button class="mode-btn" id="challengeModeBtn">闖關模式</button>
+            </div>
+            
+            <div class="color-selection" id="colorSelection">
+                <label class="color-option">
+                    <input type="radio" name="playerColor" value="black" checked>
+                    <span class="player-stone black"></span>
+                    <span>我要黑子 (先手)</span>
+                </label>
+                <label class="color-option">
+                    <input type="radio" name="playerColor" value="white">
+                    <span class="player-stone white"></span>
+                    <span>我要白子 (後手)</span>
+                </label>
+            </div>
+            
+            <div class="challenge-info" id="challengeInfo">
+                <div class="challenge-level" id="challengeLevel">第 1 關</div>
+                <div class="challenge-progress" id="challengeProgress">菜鳥級 AI</div>
+            </div>
+            
+            <div class="game-status" id="gameStatus">你的回合</div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+            <div class="board-grid" id="boardGrid"></div>
+        </div>
+
+        <div class="game-info" id="gameInfo">
+            <div class="player-info">
+                <span class="player-stone black"></span>
+                <span>玩家 (黑子)</span>
+            </div>
+            <div class="player-info">
+                <span class="player-stone white"></span>
+                <span>電腦 (白子)</span>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button class="btn btn-primary" id="newGameBtn">新遊戲</button>
+            <button class="btn btn-secondary" id="undoBtn">悔棋</button>
+        </div>
+    </div>
+
+    <div class="winner-message" id="winnerMessage">
+        <div class="winner-content">
+            <div class="winner-text" id="winnerText"></div>
+            <div class="winner-buttons">
+                <button class="btn btn-primary" id="restartGameBtn">再來一局</button>
+                <button class="btn btn-success" id="nextLevelBtn" style="display: none;">下一關</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
